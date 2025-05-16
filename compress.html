@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>Compress File</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Oswald:wght@300;400;500;600&display=swap" rel="stylesheet">
+        <style type="text/css">
+            html, body {
+                height: 100%;
+                margin: 0;
+                font-family: 'Oswald', sans-serif;
+                background-color: white;
+            }
+            .heading{
+                font-family: 'Kalam', cursive;
+                text-align: center;
+                margin-top: 150px;
+                font-size: 44px;
+                font-weight: 700;
+            }
+            .bton{
+                font-weight: 600;
+                font-size: 16px;
+                background: white;
+                color: black;
+                border: transparent;
+                padding: 5px 15px;
+                cursor: pointer;
+            }
+            .bton:hover{
+                background: transparent;
+                color: white;
+                text-decoration: none;
+            }
+            .bton2{
+                font-weight: 600;
+                font-size: 16px;
+                background: transparent;
+                color: black;
+                border: transparent;
+                padding: 8px 25px;
+            }
+            .form-container {
+                text-align: center;
+                margin-top: 30px;
+            }
+            #success {
+                margin-top: 50px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="form-container">
+            <h1 class="heading">COMPRESS YOUR FILE</h1>
+            <form action="/compress" method="POST" enctype="multipart/form-data">
+                <label style="margin-top:20px; margin-bottom:30px; font-weight:lighter; font-size:16px;">Select any text-based file to compress it !</label>
+                <input type="file" name="file" id="file" style="font-size:16px; width:170px; height:25px; margin-left:44%; background:white; color:#a0a0a0;">
+                <button class="bton" type="submit">Upload</button><br>
+                <label style="margin-top:20px; font-weight:lighter; font-size:16px;">Please wait after uploading so that your file gets compressed.</label>
+            </form>
+
+            <p id="success"></p><br>
+            <button class="bton2" id="dd" style="margin-top:20px;">
+                <a id="download" href="/download" style="text-decoration:none; color:black;">Download</a>
+            </button>
+        </div>
+    </body>
+</html>
